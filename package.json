@@ -1,0 +1,19 @@
+{
+  "name": "common-algorithms-handbook",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "算法这件事 — 把生活里到处都在跑的那些算法讲成人话的可听版手册",
+  "scripts": {
+    "dev": "vitepress dev docs",
+    "build": "vitepress build docs",
+    "preview": "vitepress preview docs"
+  },
+  "dependencies": {
+    "@fontsource-variable/jetbrains-mono": "^5.3.0",
+    "@fontsource-variable/manrope": "^5.3.0"
+  },
+  "devDependencies": {
+    "vitepress": "^1.6.4"
+  }
+}

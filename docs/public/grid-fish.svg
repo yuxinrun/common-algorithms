@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="1024" height="1024" role="img" aria-label="鱼心快跑：戴圆眼镜、拿直尺在方格纸上画最短路径的青色小鱼">
+  <defs>
+    <pattern id="dotgrid" width="42" height="42" patternUnits="userSpaceOnUse">
+      <circle cx="3" cy="3" r="2.6" fill="#0E201C" opacity="0.075" />
+    </pattern>
+    <pattern id="paper" width="64" height="64" patternUnits="userSpaceOnUse">
+      <path d="M64 0 H0 V64" fill="none" stroke="#0A958A" stroke-width="2.4" opacity="0.28" />
+    </pattern>
+  </defs>
+
+  <rect width="1024" height="1024" rx="120" fill="#F6F4EE" />
+  <rect width="1024" height="1024" rx="120" fill="url(#dotgrid)" />
+
+  <!-- 地面虚线 -->
+  <path d="M96 872 H 928" stroke="#0E201C" stroke-width="8" stroke-linecap="round" stroke-dasharray="4 34" opacity="0.35" />
+
+  <!-- 方格纸：歪着放的一张，上面已经画好一条阶梯状最短路径 -->
+  <g transform="translate(720 452) rotate(-7)">
+    <rect x="-216" y="-236" width="432" height="472" rx="18" fill="#FFFDF8" stroke="#0E201C" stroke-width="7" opacity="0.95" />
+    <rect x="-216" y="-236" width="432" height="472" rx="18" fill="url(#paper)" />
+    <!-- 那条路 -->
+    <path d="M-152 180 L-152 60 L-8 60 L-8 -60 L152 -60 L152 -180" fill="none" stroke="#0A958A" stroke-width="16" stroke-linecap="round" stroke-linejoin="round" />
+    <circle cx="-152" cy="180" r="20" fill="#E85734" />
+    <circle cx="152" cy="-180" r="20" fill="#0E201C" />
+    <!-- 被划掉的绕远路 -->
+    <path d="M-152 180 L120 180 L120 -140" fill="none" stroke="#E85734" stroke-width="8" stroke-dasharray="14 12" opacity="0.75" />
+    <path d="M60 96 l 40 40 M100 96 l -40 40" stroke="#E85734" stroke-width="9" stroke-linecap="round" opacity="0.9" />
+  </g>
+
+  <!-- 小鱼：站直、身体前倾、一鳍按纸一鳍举尺 -->
+  <g transform="translate(312 604) rotate(-8)">
+    <!-- 尾巴 -->
+    <path d="M-142 -6 L -256 -96 Q -224 -6 -256 84 Z" fill="#0A958A" />
+
+    <!-- 腿与脚 -->
+    <g stroke="#0A958A" stroke-width="28" stroke-linecap="round" fill="none">
+      <path d="M-46 96 L -66 214" />
+      <path d="M34 104 L 58 214" />
+    </g>
+    <g fill="#0A958A">
+      <ellipse cx="-78" cy="222" rx="30" ry="16" />
+      <ellipse cx="70" cy="222" rx="30" ry="16" />
+    </g>
+
+    <!-- 身体 -->
+    <ellipse rx="158" ry="112" fill="#0A958A" />
+    <ellipse cx="20" cy="40" rx="112" ry="54" fill="#35D8C4" />
+
+    <!-- 背鳍 -->
+    <path d="M-52 -100 Q -8 -164 42 -108 Z" fill="#046B63" />
+
+    <!-- 按在纸上的前鳍 -->
+    <g stroke="#0A958A" stroke-width="30" stroke-linecap="round" fill="none">
+      <path d="M112 -18 Q 196 -40 246 -6" />
+    </g>
+
+    <!-- 举着直尺的前鳍 -->
+    <g stroke="#0A958A" stroke-width="28" stroke-linecap="round" fill="none">
+      <path d="M96 44 Q 168 62 206 34" />
+    </g>
+
+    <!-- 直尺 -->
+    <g transform="translate(232 22) rotate(-24)">
+      <rect x="-24" y="-16" width="248" height="34" rx="12" fill="#F6F4EE" stroke="#0E201C" stroke-width="6" />
+      <g stroke="#0E201C" stroke-width="5" opacity="0.8">
+        <path d="M12 -16 V 2" />
+        <path d="M44 -16 V -4" />
+        <path d="M76 -16 V 2" />
+        <path d="M108 -16 V -4" />
+        <path d="M140 -16 V 2" />
+        <path d="M172 -16 V -4" />
+        <path d="M204 -16 V 2" />
+      </g>
+    </g>
+
+    <!-- 圆眼镜：认真读数的那张脸 -->
+    <g fill="none" stroke="#0E201C" stroke-width="10">
+      <circle cx="58" cy="-42" r="38" />
+      <circle cx="142" cy="-52" r="26" opacity="0.85" />
+      <path d="M96 -48 Q 112 -62 116 -52" />
+      <path d="M20 -52 L -30 -66" />
+    </g>
+    <circle cx="58" cy="-42" r="9" fill="#0E201C" />
+    <circle cx="142" cy="-52" r="7" fill="#0E201C" />
+    <!-- 嘴：算明白了的那点得意 -->
+    <path d="M112 34 q 26 18 46 -2" stroke="#0E201C" stroke-width="11" fill="none" stroke-linecap="round" />
+  </g>
+
+  <!-- 旁边飘着的三个候选答案：它只留最短的那个 -->
+  <g font-family="monospace" fill="#687A75" opacity="0.9">
+    <text x="150" y="250" font-size="40">O(n²)</text>
+    <text x="150" y="316" font-size="40" fill="#0A958A">O(n log n)</text>
+    <path d="M146 220 l 128 32 M146 252 l 128 -32" stroke="#E85734" stroke-width="8" stroke-linecap="round" />
+  </g>
+</svg>

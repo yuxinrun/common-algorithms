@@ -1,0 +1,17 @@
+node_modules/
+docs/.vitepress/dist/
+docs/.vitepress/cache/
+.DS_Store
+*.local
+.venv/
+__pycache__/
+*.pyc
+.env
+.env.*
+.inspect/
+.shots/
+.idea/
+# .qoder 里的调研底稿、事实库与自查脚本是这个站的溯源记录，要跟着仓库走；只忽略临时截图
+.qoder/*
+!.qoder/*.md
+!.qoder/*.mjs
